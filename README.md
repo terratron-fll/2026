@@ -1,1 +1,3 @@
-# 2026
+# Team Terratron 2026
+
+This is the repo for Team Terratron's First Lego League code for 2026. Welcome to the team...
