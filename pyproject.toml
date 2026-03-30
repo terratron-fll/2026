@@ -1,7 +1,17 @@
 [project]
 name = "fll-harness"
 version = "0.1.0"
-dependencies = ["pybricks"] # pybricks is the first attempt, let's switch this if needed.
+requires-python = ">=3.11"
+dependencies = [
+    "pybricks==3.3.0",
+    "pybricksdev==1.3.0"
+]
+
+[tool.uv]
+dev-dependencies = [
+    "ruff==0.3.3",
+    "mypy==1.9.0"
+]
 
 [tool.ruff]
 line-length = 88
