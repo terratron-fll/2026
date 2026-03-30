@@ -1,0 +1,27 @@
+[project]
+name = "fll-harness"
+version = "0.1.0"
+dependencies = ["pybricks"] # pybricks is the first attempt, let's switch this if needed.
+
+[tool.ruff]
+line-length = 88
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = []
+
+[tool.mypy]
+strict = true
+warn_return_any = true
+warn_unused_configs = true
+
+# Ignore missing imports for any underlying MicroPython modules
+[[tool.mypy.overrides]]
+module = [
+    "pybricks.*",
+    "urandom",
+    "usys",
+    "umath"
+]
+ignore_missing_imports = true
