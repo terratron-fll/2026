@@ -1,5 +1,8 @@
+# Python caches
 __pycache__/
 *.py[cod]
 .mypy_cache/
 .ruff_cache/
+
+# Jujustu internal state
 .jj/
