@@ -20,5 +20,6 @@ def run_mission() -> None:
     # Wait for 2 seconds so we can see the light
     wait(2000)
 
+
 if __name__ == "__main__":
     run_mission()

@@ -34,12 +34,11 @@ This will create a `.venv` directory and ensure all tools (like `ruff` for linti
 
 ### Running Code
 
-To run a script (like our hello world example), use `uv run`:
+To run our main mission script, use:
 
 ```bash
 uv run run
 ```
-*(Note: We've added a shortcut! `uv run run` will execute the current main mission script).*
 
 ### Code Quality (Linters & Type Checking)
 
