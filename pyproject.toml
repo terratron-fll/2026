@@ -13,13 +13,22 @@ line-length = 88
 target-version = "py311"
 
 [tool.ruff.lint]
-select = ["E", "F", "W", "I"]
+# E: pycodestyle errors, F: Pyflakes, W: pycodestyle warnings, I: isort, N: pep8-naming, B: flake8-bugbear, UP: pyupgrade
+select = ["E", "F", "W", "I", "N", "B", "UP"]
 ignore = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+skip-magic-trailing-comma = false
+line-ending = "auto"
 
 [tool.mypy]
 strict = true
 warn_return_any = true
 warn_unused_configs = true
+disallow_untyped_defs = true
+check_untyped_defs = true
 
 # Ignore missing imports for any underlying MicroPython modules
 [[tool.mypy.overrides]]
@@ -36,3 +45,11 @@ dev = [
     "mypy>=1.19.1",
     "ruff>=0.3.3",
 ]
+
+[tool.uv]
+managed = true
+
+[tool.uv.scripts]
+check = "ruff check . && mypy ."
+format = "ruff format ."
+run = "python projects/helloworld.py"

@@ -1,8 +1,26 @@
-# Python caches
+# Python caches and environments
 __pycache__/
 *.py[cod]
+*$py.class
+.venv/
+.python-version
+
+# Type checking and linting
 .mypy_cache/
 .ruff_cache/
+.pytest_cache/
 
-# Jujustu internal state
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# IDEs and editors
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+
+# Project specific
 .jj/
